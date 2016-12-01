@@ -80,6 +80,8 @@ open class FayeClient : TransportDelegate {
   let pendingSubsLockQueue = DispatchQueue(label:"com.fayeclient.pendingSubscriptionsLockQueue")
   let openSubsLockQueue = DispatchQueue(label:"com.fayeclient.openSubscriptionsLockQueue")
     
+  public var extInformation : Dictionary<String, Any>?
+    
   // MARK: Init
   public init(aFayeURLString:String, channel:String?, timeoutAdvice:Int=10000) {
     self.fayeURLString = aFayeURLString
